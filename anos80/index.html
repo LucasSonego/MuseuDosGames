@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .anos80 {
+        color: #fff;
+        line-height: 24px;
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+        padding: 20px;
+      }
+
+      .anos80 .titulo {
+        margin-bottom: 25px;
+      }
+
+      .anos80 .text-1,
+      .anos80 .text-2 {
+        margin-top: 15px;
+      }
+
+      .anos80 .footer {
+        position: fixed;
+        height: 125px;
+
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        margin-bottom: 0px;
+      }
+
+      .anos80 .tijolos {
+        background-image: url("./anos80/assets/tijolo.png");
+        background-repeat: repeat-x;
+        background-size: 50px 50px;
+
+        position: fixed;
+        height: 50px;
+
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        margin-bottom: 0px;
+      }
+
+      .personagens {
+        height: 75px;
+        display: flex;
+        align-items: flex-start;
+        position: relative;
+        animation: mario-mover-personagens 10s linear infinite;
+      }
+
+      .anos80 .player,
+      .anos80 .bicho-1,
+      .anos80 .bicho-2 {
+        height: 75px;
+        width: auto;
+      }
+
+      .anos80 .bicho-1,
+      .anos80 .bicho-2 {
+        margin-top: 18px;
+      }
+
+      .anos80 .player {
+        margin-left: 50px;
+      }
+
+      @keyframes mario-mover-personagens {
+        from {
+          left: -280px;
+        }
+
+        to {
+          left: 130%;
+        }
+      }
+    </style>
+    <script>
+      function mudarConteudoAnos80(){
+        if($(".jogo").is(":hidden")){
+          $(".console").hide();
+          $(".jogo").show();
+          $(".mudarConteudo").empty();
+          $(".mudarConteudo").append("Consoles >")
+        }else{
+          $(".jogo").hide();
+          $(".console").show();
+          $(".mudarConteudo").empty();
+          $(".mudarConteudo").append("Jogos >")
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="anos80 conteudo">
+      <div class="container">
+        <h1 class="titulo">Anos 80</h1>
+
+        <div class="console">
+          <h2>Nintendo Nes</h2>
+          <div class="text-1">
+            Seja conhecido como Famicom, NES, Nintendinho ou pelos nomes de
+            inúmeros clones que surgiram - e surgem até hoje -, o 8-bit da
+            Nintendo será eternamente citado com um dos maiores videogames da
+            história. Franquias clássicas tiveram berço no console, como Mario,
+            Zelda, Final Fantasy e Metroid, entre tantas.
+          </div>
+        </div>
+
+        <div class="jogo" hidden>
+          <h2 title="Qual Mario?">Mario</h2>
+          <p class="text-1">
+            Super Mario é uma série de jogos eletrônicos de plataforma, criada
+            pela Nintendo, baseada e estrelada pelo encanador fictício Mario.
+          </p>
+          <p class="text-2">
+            Alternativamente chamada de série Super Mario Bros. é a série
+            central da ampla franquia Mario. Pelo menos um Super Mario foi
+            lançado para todas as principais plataformas da Nintendo. Existem
+            vinte e um jogos semelhantes na série e um jogo de série cruzada,
+            Super Mario World 2: Yoshi's Island, que pode ou não ser incluído
+            como parte da série.
+          </p>
+        </div>
+        <button class="mudarConteudo" onclick="mudarConteudoAnos80()">Jogos ></button>
+      </div>
+      <div class="footer">
+        <div class="personagens">
+          <img
+            class="bicho-1"
+            src="./anos80/assets/bicho.png"
+            alt=""
+            srcset=""
+          />
+          <img
+            class="bicho-2"
+            src="./anos80/assets/bicho.png"
+            alt=""
+            srcset=""
+          />
+          <img
+            class="player"
+            src="./anos80/assets/marioatonisa.gif"
+            alt=""
+            srcset=""
+          />
+        </div>
+        <div class="tijolos"></div>
+      </div>
+    </div>
+  </body>
+</html>

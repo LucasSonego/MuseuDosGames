@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .anos00 {
+      color: #fff;
+      line-height: 24px;
+      display: flex;
+      flex-direction: column;
+      box-sizing: border-box;
+      padding: 20px;
+    }
+
+    .anos00 .container {
+      padding-bottom: 275px;
+      padding-top: 20px;
+    }
+
+    .anos00 .titulo {
+      margin-bottom: 25px;
+      font-size: 32px;
+    }
+
+    .anos00 .text-1,
+    .anos00 .text-2 {
+      margin-top: 15px;
+    }
+
+    .anos00 .footer {
+      position: fixed;
+      height: 125px;
+
+      bottom: 0px;
+      left: 0px;
+      right: 0px;
+      margin-bottom: 0px;
+    }
+
+    .anos00 .mapa {
+      z-index: 1;
+      background-image: url("./anos00/assets/mapa2.jpg");
+      background-size: cover;
+      height: 275px;
+      -webkit-mask-image: -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        from(rgba(0, 0, 0, 0)),
+        to(rgba(0, 0, 0, 1))
+      );
+      mask-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 1)
+      );
+      position: fixed;
+
+      bottom: 0px;
+      left: 0px;
+      right: 0px;
+      margin-bottom: 0px;
+    }
+
+    .anos00 .icones img {
+      height: 80px;
+      width: 80px;
+      z-index: 999;
+      position: fixed;
+    }
+
+    .anos00 .icones .home {
+      left: 50%;
+      bottom: 150px;
+    }
+    .anos00 .icones .car-wash {
+      left: 35%;
+      bottom: 50px;
+    }
+    .anos00 .icones .license {
+      left: 67%;
+      bottom: 110px;
+    }
+    .anos00 .icones .go-race {
+      left: 10%;
+      bottom: 160px;
+    }
+    .anos00 .icones .honda {
+      left: 25%;
+      bottom: 100px;
+    }
+    .anos00 .icones .toyota {
+      left: 80%;
+      bottom: 40px;
+    }
+    .anos00 .icones .nissan {
+      left: 2%;
+      bottom: 20px;
+    }
+  </style>
+  <script>
+    function mudarConteudoanos00() {
+      if ($(".jogo").is(":hidden")) {
+        $(".console").hide();
+        $(".jogo").show();
+        $(".mudarConteudo").empty();
+        $(".mudarConteudo").append("Consoles >");
+      } else {
+        $(".jogo").hide();
+        $(".console").show();
+        $(".mudarConteudo").empty();
+        $(".mudarConteudo").append("Jogos >");
+      }
+    }
+  </script>
+  <body>
+    <div class="anos00 conteudo">
+      <div class="container">
+        <h2 class="titulo">Anos 2000</h2>
+        <div class="console">
+          <h2>PlayStation</h2>
+          <p class="text-1">
+            O primeiro PlayStation foi originalmente concebido como resultado de
+            uma parceria de 1991 entre ele e o figurão da indústria, a Nintendo.
+            A casa de Mario queria lançar um console complementar baseado em CD
+            para o Super Nintendo Entertainment System (SNES) na época e
+            contratou a Sony para desenvolver a máquina.
+          </p>
+          <p class="text-3">
+            O PS1 estava entre a primeira onda de consoles capazes de fornecer
+            visuais 3D, ao mesmo tempo em que foi indiscutivelmente o primeiro
+            console baseado em CD a realmente ganhar popularidade global
+            generalizada. Isso diferia da oferta de seu arquirrival, o Nintendo
+            64, que ainda usava cartuchos. Os CDs tinham tempos de carregamento
+            muito mais lentos do que os cartuchos, mas ofereciam 700 MB de dados
+            em comparação com o máximo de 64 MB de armazenamento visto nos jogos
+            N64 posteriores. Isso permitiu que os desenvolvedores do PS1
+            colocassem toneladas de conteúdo no jogo, muitas horas de trilhas de
+            áudio/dublagem e muito conteúdo de vídeo em seus jogos. Na verdade,
+            não era incomum ver portas N64 de jogos PS1 - como Tony Hawk's Pro
+            Skater - sem faixas de música, mais dublagem e/ou vídeos.
+          </p>
+        </div>
+        <div class="jogo" hidden>
+          <h2>Gran Turismo</h2>
+          <p class="text-1">
+            Gran Turismo é uma série de jogos de corrida de carros reais, e tem
+            a intenção de disponibilizar uma ampla variedade de automóveis
+            conhecidos licenciados pelas grandes marcas. O primeiro jogo foi
+            publicado em 1997 pela Sony Interactive Entertainment e hoje está na
+            sua oitava versão, todas com exclusividade ao PlayStation.
+          </p>
+          <p class="text-1">
+            Com suporte ao Playstation 4 e Playstation 5 de modo multiplataforma
+            e com o benefício do Ray Tracing o Gran Turismo 7 foi lançado em
+            2022 com 424 carros disponíveis além de circuitos reais e fictícios
+            para as corridas.
+          </p>
+        </div>
+        <button class="mudarConteudo" onclick="mudarConteudoanos00()">
+          Jogos >
+        </button>
+      </div>
+      <div class="footer">
+        <div class="icones">
+          <img src="./anos00/assets/home.svg" class="home" alt="" srcset="" />
+          <img
+            src="./anos00/assets/car-wash.svg"
+            class="car-wash"
+            alt=""
+            srcset=""
+          />
+          <img
+            src="./anos00/assets/go-race.svg"
+            class="go-race"
+            alt=""
+            srcset=""
+          />
+          <img src="./anos00/assets/honda.svg" class="honda" alt="" srcset="" />
+          <img
+            src="./anos00/assets/license.svg"
+            class="license"
+            alt=""
+            srcset=""
+          />
+          <img
+            src="./anos00/assets/nissan.svg"
+            class="nissan"
+            alt=""
+            srcset=""
+          />
+          <img
+            src="./anos00/assets/toyota.svg"
+            class="toyota"
+            alt=""
+            srcset=""
+          />
+        </div>
+        <div class="mapa"></div>
+      </div>
+    </div>
+  </body>
+</html>

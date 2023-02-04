@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home | Museu dos Games</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@800&family=Press+Start+2P&family=Rubik+Mono+One&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <script
+    src="https://code.jquery.com/jquery-3.6.2.min.js"
+    integrity="sha256-2krYZKh//PcchRtd+H+VyyQoZ/e3EcrkxhM8ycwASPA="
+    crossorigin="anonymous"
+  ></script>
+  <script defer src="scripts.js"></script>
+  <body>
+    <div class="timeline">
+      <button
+        class="anos70 botao-timeline"
+        onclick="carregarHtmlPagina('anos70', 'Anos 70')"
+      >
+        1970s
+      </button>
+      <button
+        class="anos80 botao-timeline"
+        onclick="carregarHtmlPagina('anos80', 'Anos 80')"
+      >
+        1980s
+      </button>
+      <button
+        class="anos90 botao-timeline"
+        onclick="carregarHtmlPagina('anos90', 'Anos 90')"
+      >
+        1990s
+      </button>
+      <button
+        class="anos00 botao-timeline"
+        onclick="carregarHtmlPagina('anos00', 'Anos 2000')"
+      >
+        2000s
+      </button>
+      <button
+        class="anos10 botao-timeline"
+        onclick="carregarHtmlPagina('anos10', 'Anos 2010')"
+      >
+        2010s
+      </button>
+      <button
+        class="anos20 botao-timeline"
+        onclick="carregarHtmlPagina('anos20', 'Anos 2020')"
+      >
+        2020s
+      </button>
+    </div>
+    <div id="conteudo"></div>
+  </body>
+</html>
