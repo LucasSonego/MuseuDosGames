@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+}
+
+#conteudo,
+.conteudo {
+  height: 100%;
+  display: block;
+  overflow: auto;
+  box-sizing: border-box;
+}
+
+.timeline {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.timeline button {
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  border: none;
+  height: 60px;
+  color: #fff;
+  transition: opacity 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.timeline button:hover {
+  opacity: 0.9;
+}
+
+.era-selecionada:hover {
+  opacity: 1 !important;
+}
+
+.anos70 {
+  background-color: #2c3e50;
+  font-family: "Press Start 2P", cursive;
+}
+
+.anos80 {
+  background-color: #415361;
+  font-family: "Press Start 2P", cursive;
+}
+
+.anos70.botao-timeline,
+.anos80.botao-timeline {
+  font-size: 22px;
+}
+
+.anos90 {
+  background-color: #566772;
+  font-family: "Rubik Mono One", sans-serif;
+}
+
+.anos00 {
+  background-color: #6b7c84;
+  font-family: "Rubik Mono One", sans-serif;
+}
+
+.anos10 {
+  background-color: #809095;
+  font-family: "Inter", sans-serif;
+}
+
+.anos20 {
+  background-color: #95a5a6;
+  font-family: "Inter", sans-serif;
+}
+
+.anos90.botao-timeline,
+.anos00.botao-timeline,
+.anos10.botao-timeline,
+.anos20.botao-timeline {
+  font-size: 28px;
+}
+
+@media (min-width: 600px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 100%;
+  }
+}
+
+.mudarConteudo{
+  background: none;
+  border:none;
+  outline: none;
+  color: #fff;
+  font-family: inherit;
+  font-size: 18px;
+  margin-top: 40px;
+  margin-left: auto;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.mudarConteudo:hover{
+  text-decoration: underline;
+}

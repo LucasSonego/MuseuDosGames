@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .anos70 {
+        color: #fff;
+        line-height: 24px;
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+        padding: 20px;
+      }
+
+      .anos70 .titulo {
+        margin-bottom: 25px;
+      }
+
+      .anos70 .jogo .linha {
+        width: 315px;
+        padding: 5px 0;
+        animation: space-invaders-mover-bixos 6s linear infinite;
+      }
+
+      .anos70 .text-1,
+      .anos70 .text-2,
+      .anos70 .jogo {
+        margin-top: 20px;
+      }
+
+      .anos70 .jogo .player {
+        margin-top: 100px;
+        animation: space-invaders-mover-player 5s linear infinite;
+      }
+
+      @keyframes space-invaders-mover-player {
+        from {
+          margin-left: 0px;
+        }
+
+        50% {
+          margin-left: 320px;
+        }
+
+        to {
+          margin-left: 0px;
+        }
+      }
+
+      @keyframes space-invaders-mover-bixos {
+        from {
+          margin-left: 0px;
+        }
+
+        50% {
+          margin-left: 70px;
+        }
+
+        to {
+          margin-left: 0px;
+        }
+      }
+
+      @media (min-width: 600px) {
+        .anos70 .grid {
+          display: grid;
+          grid-gap: 15px;
+          grid-template-columns: 1fr 1fr;
+
+          grid-template-areas:
+            "t1 jogo"
+            "t2 t2";
+        }
+
+        .anos70 .text-1 {
+          grid-area: t1;
+        }
+
+        .anos70 .text-2 {
+          grid-area: t2;
+        }
+
+        .anos70 .jogo {
+          grid-area: jogo;
+        }
+      }
+    </style>
+    <script>
+      function mudarConteudoAnos70(){
+        if($(".jogo").is(":hidden")){
+          $(".console").hide();
+          $(".jogo").show();
+          $(".mudarConteudo").empty();
+          $(".mudarConteudo").append("Consoles >")
+        }else{
+          $(".jogo").hide();
+          $(".console").show();
+          $(".mudarConteudo").empty();
+          $(".mudarConteudo").append("Jogos >")
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="anos70 conteudo">
+      <div class="container">
+        <h1 class="titulo">Anos 70</h1>
+
+        <div class="console">
+          <h2>Atari</h2>
+          <div class="text-1">
+            Em 1979 a empresa lançou o Atari 2600 que foi o presente de natal
+            mais vendido, principalmente por seus jogos exclusivos. Milhões de
+            consoles foram vendidos naquele ano. A Atari licenciou o grande
+            sucesso de arcade Space Invaders, o qual aumentou ainda mais a
+            popularidade do console, dobrando as vendas novamente para mais de 2
+            milhões de unidades vendidas.
+          </div>
+          <div class="text-2">
+            O Atari 2600 destacou-se não apenas no aspecto comercial, mas foi
+            muito mais além, representando muito aprendizado e desenvolvimento
+            tecnológico, influenciando a indústria de jogos da atualidade, como
+            também marcou a memória de muitos e muitos jovens da época, que
+            guardarão as emoções vividas naquela época para sempre.
+          </div>
+        </div>
+
+        <div class="jogo" hidden>
+          <h2>Space Invaders</h2>
+          <div class="grid">
+            <p class="text-1">
+              Space Invaders é um jogo de videogame de arcade desenhado por
+              Tomohiro Nishikado e lançado em 1978. Foi originalmente construído
+              pela Taito Corporation e um tempo depois foi licenciado para
+              produção nos Estados Unidos pela Midway Games.
+            </p>
+            <div class="jogo">
+              <div class="linha">
+                <img src="./anos70/assets/bixo1.png" alt="" srcset="" />
+                <img src="./anos70/assets/bixo1.png" alt="" srcset="" />
+                <img src="./anos70/assets/bixo1.png" alt="" srcset="" />
+                <img src="./anos70/assets/bixo1.png" alt="" srcset="" />
+                <img src="./anos70/assets/bixo1.png" alt="" srcset="" />
+              </div>
+              <div class="linha">
+                <img src="./anos70/assets/bixo2.png" alt="" srcset="" />
+                <img src="./anos70/assets/bixo2.png" alt="" srcset="" />
+                <img src="./anos70/assets/bixo2.png" alt="" srcset="" />
+                <img src="./anos70/assets/bixo2.png" alt="" srcset="" />
+                <img src="./anos70/assets/bixo2.png" alt="" srcset="" />
+              </div>
+              <img
+                class="player"
+                src="./anos70/assets/player.png"
+                alt=""
+                srcset=""
+              />
+            </div>
+            <p class="text-2">
+              Uma curiosidade sobre o jogo Space Invaders foi que ele foi um dos
+              primeiros jogos de tiro com gráfico bidimensional.
+            </p>
+          </div>
+        </div>
+        <button class="mudarConteudo" onclick="mudarConteudoAnos70()">Jogos ></button>
+      </div>
+    </div>
+  </body>
+</html>

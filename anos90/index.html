@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .anos90 {
+      color: #fff;
+      line-height: 24px;
+      display: flex;
+      flex-direction: column;
+      box-sizing: border-box;
+      padding: 20px;
+    }
+
+    .anos90 .container {
+      padding-bottom: 160px;
+      padding-top: 20px;
+    }
+
+    .anos90 .titulo {
+      margin-bottom: 25px;
+      font-size: 32px;
+    }
+
+    .anos90 .text-1,
+    .anos90 .text-2 {
+      margin-top: 15px;
+    }
+
+    .anos90 .footer {
+      position: fixed;
+      height: 125px;
+
+      bottom: 0px;
+      left: 0px;
+      right: 0px;
+      margin-bottom: 0px;
+    }
+
+    .anos90 .grama {
+      background-image: url("./anos90/assets/grama.png");
+      background-repeat: repeat-x;
+      background-size: 150px 50px;
+
+      position: fixed;
+      height: 50px;
+
+      bottom: 0px;
+      left: 0px;
+      right: 0px;
+      margin-bottom: 0px;
+    }
+
+    .anos90 .sonic {
+      height: 85px;
+      position: relative;
+      bottom: 4px;
+      margin-left: 100px;
+    }
+
+    .moedas {
+      position: relative;
+      bottom: 70px;
+      right: 50px;
+      display: flex;
+      width: 70%;
+      justify-content: space-evenly;
+      margin-left: auto;
+    }
+
+    .moeda {
+      height: 40px;
+    }
+
+    @media (max-width: 600px) {
+      .anos90 .hide-on-sm {
+        display: none;
+      }
+
+      .anos90 .sonic {
+        margin-left: 10px;
+      }
+    }
+  </style>
+  <script>
+    function mudarConteudoAnos90() {
+      if ($(".jogo").is(":hidden")) {
+        $(".console").hide();
+        $(".jogo").show();
+        $(".mudarConteudo").empty();
+        $(".mudarConteudo").append("Consoles >");
+      } else {
+        $(".jogo").hide();
+        $(".console").show();
+        $(".mudarConteudo").empty();
+        $(".mudarConteudo").append("Jogos >");
+      }
+    }
+  </script>
+  <body>
+    <div class="anos90 conteudo">
+      <div class="container">
+        <h2 class="titulo">Anos 90</h2>
+        <div class="console">
+          <h2>Mega Drive</h2>
+          <p class="text-1">
+            Mega Drive conhecido como Sega Genesis na América do Norte, é um
+            console de video game de 16 bits desenvolvido e comercializado pela
+            Sega sendo um sucessor do Master System. O console foi lançado em
+            1988 no Japão como Mega Drive e em 1989 na América do Norte como
+            Genesis. No ano de 1990, foi distribuído na Europa pela Virgin
+            Mastertronic, na Nova Zelândia e Austrália pela Ozisoft e pela
+            Tectoy no Brasil. Na Coreia do Sul, foi distribuído pela Samsung com
+            o nome Super Gam*Boy e posteriormente como Super Aladdin Boy. Na
+            Rússia, foi distribuído pela Forrus.
+          </p>
+          <p class="text-2">
+            O console vendeu menos unidades no Japão em comparação aos seus dois
+            outros concorrentes, o Super Famicom e o PC Engine, mas obteve um
+            sucesso considerável na América do Norte, Brasil e Europa. Devido a
+            imensa popularidade da série Sonic the Hedgehog, dos relançamentos
+            de jogos de fliperama para o console de mesa, de uma variedade de
+            jogos esportivos e do forte marketing voltado ao público juvenil, o
+            Mega Drive teve uma grande adoção entre os consumidores adolescentes
+            e adultos.
+          </p>
+        </div>
+        <div class="jogo" hidden>
+          <h2>Sonic</h2>
+          <p class="text-1">
+            A franquia segue Sonic, cuja vida pacífica é sempre interrompida
+            pelo antagonista principal da série, Dr. Eggman. Sonic - normalmente
+            junto de um de seus aliados, como Tails e Knuckles - se aventuram
+            para parar o vilão insano e seus planos para dominação mundial.
+          </p>
+          Sonic the Hedgehog é uma série de jogos e uma franquia multimídia
+          japonesa criada pelo Sonic Team e produzida pela Sega.
+          <p class="text-1">
+            A franquia segue Sonic, cuja vida pacífica é sempre interrompida
+            pelo antagonista principal da série, Dr. Eggman. Sonic - normalmente
+            junto de um de seus aliados, como Tails e Knuckles - se aventuram
+            para parar o vilão insano e seus planos para dominação mundial.
+          </p>
+          <p class="text-1">
+            O primeiro jogo da série Sonic, lançado em 1991, foi concebido pela
+            divisão da Sega, Sonic Team após um pedido para um novo mascote. O
+            título foi um sucesso, e foi renovado para várias sequelas, que
+            levaram a Sega a liderança no rumo dos consoles de video-game da era
+            16-bit do começo até a metade dos anos 90.Atualmente, é uma das
+            franquias mais famosas e mais lucrativas da indústria dos
+            videogames.
+          </p>
+        </div>
+        <button class="mudarConteudo" onclick="mudarConteudoAnos90()">
+          Jogos >
+        </button>
+      </div>
+      <div class="footer">
+        <img class="sonic" src="./anos90/assets/sonic.gif" alt="" srcset="" />
+        <div class="moedas">
+          <img
+            class="moeda hide-on-sm"
+            src="./anos90/assets/moeda.gif"
+            alt=""
+            srcset=""
+          />
+          <img
+            class="moeda hide-on-sm"
+            src="./anos90/assets/moeda.gif"
+            alt=""
+            srcset=""
+          />
+          <img class="moeda" src="./anos90/assets/moeda.gif" alt="" srcset="" />
+          <img class="moeda" src="./anos90/assets/moeda.gif" alt="" srcset="" />
+          <img class="moeda" src="./anos90/assets/moeda.gif" alt="" srcset="" />
+        </div>
+        <div class="grama"></div>
+      </div>
+    </div>
+  </body>
+</html>
