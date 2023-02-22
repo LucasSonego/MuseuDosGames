@@ -6,7 +6,167 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
+  <style>
+    .home {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #243240;
+      color: #fff;
+    }
+
+    .home p {
+      font-size: 22px;
+    }
+
+    .home .image-mosaic {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      grid-auto-rows: 240px;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding-bottom: 10px;
+    }
+
+    .home .intro {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px 0;
+    }
+
+    .home .card {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: #353535;
+      font-size: 3rem;
+      color: #fff;
+      box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem,
+        rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
+      height: 100%;
+      width: 100%;
+      border-radius: 4px;
+      transition: all 500ms;
+      overflow: hidden;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      padding: 0;
+      margin: 0;
+      color: #fff0;
+      cursor: pointer;
+      text-align: center;
+    }
+
+    .home .card:hover {
+      color: #fff;
+    }
+
+    @media screen and (min-width: 600px) {
+      .home .card-tall {
+        grid-row: span 2 / auto;
+      }
+
+      .home .card-wide {
+        grid-column: span 2 / auto;
+      }
+    }
+  </style>
   <body>
-    <h2>HOME</h2>
+    <div class="home">
+      <div class="intro">
+        <h2>Museu dos Games</h2>
+        <p>
+          A história dos jogos eletrônicos teve início quando os acadêmicos
+          começaram a projetar jogos simples, simuladores e programas de
+          inteligência artificial, como parte de suas pesquisas em ciência da
+          computação. Somente a partir das décadas de 1970 e 1980 é que os jogos
+          eletrônicos se tornaram populares, quando jogos de arcade, console de
+          jogos eletrônicos e jogos de computador foram introduzidos ao público
+          em geral. Desde então, os jogos eletrônicos tornaram-se uma forma
+          popular de entretenimento e uma parte da cultura moderna em diversas
+          regiões do mundo.
+        </p>
+        <p>
+          Os jogos foram desenvolvidos para ampliar a mente e desenvolver melhor
+          o cérebro nas atividades escolares, como uma consequência das
+          pesquisas da computação em áreas como a inteligência artificial. A
+          comercialização do UNIVAC I (considerado o primeiro computador
+          comercial da história) em 1951 abriu caminho para a adoção dos
+          computadores por instituições acadêmicas, órgãos de pesquisa e
+          empresas em todo o mundo desenvolvido.
+        </p>
+        <br />
+        <p>
+          Clicando nas imagens abaixo ou na linha do tempo no topo, você poderá
+          explorar conhecer mais sobre a história dos games!
+        </p>
+      </div>
+      <div class="image-mosaic">
+        <div
+          class="card card-wide"
+          style="background-image: url('./home/assets/atari.jpeg')"
+          onclick="carregarHtmlPagina('anos70', 'Anos 70')"
+        >
+          Atari 2600
+        </div>
+        <div
+          class="card"
+          style="background-image: url('./home/assets/space-invaders.svg')"
+          onclick="carregarHtmlPagina('anos70', 'Anos 70')"
+        >
+          Space Invades
+        </div>
+        <div
+          class="card"
+          style="background-image: url('./home/assets/mario.jpg')"
+          onclick="carregarHtmlPagina('anos80', 'Anos 80')"
+        >
+          Super Mario
+        </div>
+        <div
+          class="card"
+          style="background-image: url('./home/assets/sonic.webp')"
+          onclick="carregarHtmlPagina('anos90', 'Anos 90')"
+        >
+          Sonic
+        </div>
+        <div
+          class="card card-wide"
+          style="background-image: url('./home/assets/nintendo-nes.jpeg')"
+          onclick="carregarHtmlPagina('anos80', 'Anos 80')"
+        >
+          Nintendo Nes
+        </div>
+        <div
+          class="card"
+          style="background-image: url('./home/assets/ps1.jpeg')"
+          onclick="carregarHtmlPagina('anos00', 'Anos 2000')"
+        >
+          PlayStation
+        </div>
+        <div
+          class="card"
+          style="background-image: url('./home/assets/gran-turismo.jpg')"
+          onclick="carregarHtmlPagina('anos00', 'Anos 2000')"
+        >
+          Gran Turismo
+        </div>
+        <div
+          class="card card-wide"
+          style="background-image: url('./home/assets/portal.png')"
+          onclick="carregarHtmlPagina('anos10', 'Anos 2010')"
+        >
+          Portal
+        </div>
+        <div
+          class="card"
+          style="background-image: url('./home/assets/flight-sim.webp')"
+          onclick="carregarHtmlPagina('anos20', 'Anos 2020')"
+        >
+          Flight Simulator
+        </div>
+      </div>
+    </div>
   </body>
 </html>

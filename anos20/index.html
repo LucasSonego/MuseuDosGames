@@ -16,9 +16,13 @@
       padding: 20px;
     }
 
+    .conteudo {
+      min-height: 100%;
+      height: fit-content !important;
+    }
+
     .anos20 .container {
-      padding-bottom: 275px;
-      padding-top: 20px;
+      box-sizing: border-box;
     }
 
     .anos20 .titulo {
@@ -28,6 +32,9 @@
 
     .anos20 h2 {
       font-size: 36px;
+    }
+
+    .anos20 p {
     }
 
     .anos20 .text-1,
@@ -41,42 +48,8 @@
       font-size: 28px;
     }
 
-    .anos20 .footer {
-      position: fixed;
-      height: 125px;
-
-      bottom: 0px;
-      left: 0px;
-      right: 0px;
-      margin-bottom: 0px;
-    }
-
-    .anos20 .nuvem1 {
-      z-index: 1;
-      background-image: url("./anos20/assets/nuvem1.png");
-      background-size: 700px;
-    background-repeat: no-repeat;
-      height: 275px;
-
-      position: fixed;
-
-      bottom: 0px;
-      left: 0px;
-      right: 0px;
-      margin-bottom: 0px;
-    }
-    .anos20 .nuvem2 {
-      z-index: 1;
-      background-image: url("./anos20/assets/nuvem2.png");
-      background-size: cover;
-      height: 275px;
-
-      position: fixed;
-
-      bottom: 0px;
-      left: 0px;
-      right: 0px;
-      margin-bottom: 0px;
+    .anos20 .aviao {
+      width: 300px;
     }
   </style>
   <script>
@@ -97,20 +70,27 @@
   <body>
     <div class="anos20 conteudo">
       <div class="container">
-        <h2 class="titulo">Anos 2010</h2>
+        <h2 class="titulo">Anos 2020</h2>
         <div class="console">
           <h2>PC</h2>
           <p class="text-1">
-            Na medida em que a tecnologia foi evoluindo, dispondo de maior poder
-            computacional e se tornando mais acessível, os computadores pessoais
-            ganharam seu espaço no mundo dos games. Os jogos não são a
-            finalidade principal dos PCs, mas sim mais uma possibilidade de uso.
+            Nos dias atuais tanto os consoles ainda possuem uma grande força no
+            mercado isso devido a suas décadas de domínio nos jogos eletrônicos,
+            mas com a evolução dos computadores doméstico hoje o PC como
+            chamamos os desktops que possuímos em casa é uma das plataformas
+            mais utilizadas pelos jogadores atuais tendo em vista que o
+            desempenho nessas máquinas muitas vezes superam os consoles e
+            possuem multifunções além dos jogos.
           </p>
           <p class="text-1">
-            As conexões de internet banda larga também possibilitaram aos
-            usuários de PCs e de alguns consoles, a compra e download de jogos
-            por meio de plataformas digitais como Steam, sem a necessidade de
-            ter mídias físicas desses jogos.
+            Outro ponto interessante é que pelo PC é possível a emulação de
+            jogos que a princípio só poderiam ser jogados em um console
+            específico, mas agora você tem acesso a diferentes jogos de
+            diferentes consoles além de jogos exclusivos para computador. Tendo
+            isso em mente a indústria atualmente está utilizando uma nova
+            estratégia que é o crossplay onde os jogos são multiplataforma, ou
+            seja, os jogadores de consoles, mobile e desktop podem jogar juntos
+            os mesmo games criando uma maior comunidade de jogadores.
           </p>
         </div>
         <div class="jogo" hidden>
@@ -135,28 +115,12 @@
             decolagem até a aterrissagem. Além disso, ele oferece recursos
             avançados de treinamento, como instruções de voo detalhadas e uma
             ampla variedade de cenários de voo.
-            <br />
-            Ao usar o Microsoft Flight Simulator como uma ferramenta
-            educacional, os alunos podem aprender conceitos teóricos em um
-            ambiente virtual realista, o que pode tornar o processo de
-            aprendizado mais interessante e efetivo.
           </p>
-          <!-- <p class="text-1">
-            Portal é um jogo que junta o entretenimento à educação, pode ser
-            utilizado para ensinar conceitos de física, resolução de problemas e
-            pensamento crítico. O jogo incentiva os jogadores a pensar em como
-            os objetos interagem com o ambiente e como eles podem ser usados
-            para solucionar problemas, os jogadores precisam avaliar diferentes
-            soluções para cada desafio e escolher a que funciona melhor.
-          </p> -->
         </div>
         <button class="mudarConteudo" onclick="mudarConteudoanos20()">
           Jogos >
         </button>
-      </div>
-      <div class="footer">
-        <div class="nuvem1"></div>
-        <div class="nuvem2"></div>
+        <img src="./anos20/assets/aviao.png" alt="" class="aviao" />
       </div>
     </div>
   </body>
