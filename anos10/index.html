@@ -11,14 +11,31 @@
       color: #fff;
       line-height: 24px;
       display: flex;
-      flex-direction: column;
       box-sizing: border-box;
       padding: 20px;
     }
 
-    .anos10 .container {
-      padding-bottom: 275px;
-      padding-top: 20px;
+    .anos10 .conteudo {
+      display: flex;
+    }
+
+    @media (min-width: 900px) {
+      .conteudo {
+        flex-direction: column;
+      }
+
+      .animation {
+        margin-top: 10px;
+      }
+
+      .anos10 .container.total {
+        box-sizing: border-box;
+        flex-direction: row;
+      }
+    }
+
+    .anos10 .container.textos {
+      box-sizing: border-box;
     }
 
     .anos10 .titulo {
@@ -41,14 +58,45 @@
       font-size: 28px;
     }
 
-    .anos10 .footer {
-      position: fixed;
-      height: 125px;
+    .anos10 .animation {
+      margin-top: 60px;
+      height: 500px;
+      width: 250px;
+    }
 
-      bottom: 0px;
-      left: 0px;
-      right: 0px;
-      margin-bottom: 0px;
+    .anos10 .portal1 {
+      width: 250px;
+      margin-bottom: 295px;
+    }
+    .anos10 .portal2 {
+      width: 250px;
+    }
+    .anos10 .atlas-div {
+      height: 456px;
+      width: 250px;
+      margin-top: -485px;
+      overflow: hidden;
+      border-radius: 81px;
+    }
+    .anos10 .atlas1,
+    .anos10 .atlas2 {
+      height: 110px;
+      position: relative;
+      margin-left: 30px;
+    }
+
+    .anos10 .atlas1 {
+      animation: atlas1-mov 1s linear infinite;
+    }
+
+    @keyframes atlas1-mov {
+      0% {
+        top: -110px;
+      }
+
+      100% {
+        top: 456px;
+      }
     }
   </style>
   <script>
@@ -68,46 +116,74 @@
   </script>
   <body>
     <div class="anos10 conteudo">
-      <div class="container">
-        <h2 class="titulo">Anos 2010</h2>
-        <div class="console">
-          <h2>PC</h2>
-          <p class="text-1">
-            Na medida em que a tecnologia foi evoluindo, dispondo de maior poder
-            computacional e se tornando mais acessível, os computadores pessoais
-            ganharam seu espaço no mundo dos games. Os jogos não são a
-            finalidade principal dos PCs, mas sim mais uma possibilidade de uso.
-          </p>
-          <p class="text-1">
-            As conexões de internet banda larga também possibilitaram aos
-            usuários de PCs e de alguns consoles, a compra e download de jogos
-            por meio de plataformas digitais como Steam, sem a necessidade de
-            ter mídias físicas desses jogos.
-          </p>
+      <div class="center">
+        <div class="container total">
+          <div class="container textos">
+            <h2 class="titulo">Anos 2010</h2>
+            <div class="console">
+              <h2>PC</h2>
+              <p class="text-1">
+                Na medida em que a tecnologia foi evoluindo, dispondo de maior
+                poder computacional e se tornando mais acessível, os
+                computadores pessoais ganharam seu espaço no mundo dos games. Os
+                jogos não são a finalidade principal dos PCs, mas sim mais uma
+                possibilidade de uso.
+              </p>
+              <p class="text-1">
+                As conexões de internet banda larga também possibilitaram aos
+                usuários de PCs e de alguns consoles, a compra e download de
+                jogos por meio de plataformas digitais como Steam, sem a
+                necessidade de ter mídias físicas desses jogos.
+              </p>
+            </div>
+            <div class="jogo" hidden>
+              <h2>Portal</h2>
+              <p class="text-1">
+                Desenvolvido pela Valve Corporation, Portal é um jogo de
+                ação/puzzle em primeira pessoa que conta com uma história de
+                ficção científica e também diversos desafios isolados,
+                oferecendo suporte e ferramentas para que a comunidade possa
+                desenvolver e compartilhar novos conteúdos e desafios para o
+                jogo.
+              </p>
+              <p class="text-1">
+                Portal é um jogo que junta o entretenimento à educação, pode ser
+                utilizado para ensinar conceitos de física, resolução de
+                problemas e pensamento crítico. O jogo incentiva os jogadores a
+                pensar em como os objetos interagem com o ambiente e como eles
+                podem ser usados para solucionar problemas, os jogadores
+                precisam avaliar diferentes soluções para cada desafio e
+                escolher a que funciona melhor.
+              </p>
+            </div>
+            <button class="mudarConteudo" onclick="mudarConteudoanos10()">
+              Jogos >
+            </button>
+          </div>
+          <div class="animation">
+            <img
+              src="./anos10/assets/portal1.png"
+              class="portal1"
+              alt=""
+              srcset=""
+            />
+            <img
+              src="./anos10/assets/portal2.png"
+              class="portal2"
+              alt=""
+              srcset=""
+            />
+            <div class="atlas-div">
+              <img
+                src="./anos10/assets/atlas.png"
+                class="atlas1"
+                alt=""
+                srcset=""
+              />
+            </div>
+          </div>
         </div>
-        <div class="jogo" hidden>
-          <h2>Portal</h2>
-          <p class="text-1">
-            Desenvolvido pela Valve Corporation, Portal é um jogo de ação/puzzle
-            em primeira pessoa que conta com uma história de ficção científica e
-            também diversos desafios isolados, oferecendo suporte e ferramentas
-            para que a comunidade possa desenvolver e compartilhar novos
-            conteúdos e desafios para o jogo.
-          </p>
-          <p class="text-1">
-            Portal é um jogo que junta o entretenimento à educação, pode ser
-            utilizado para ensinar conceitos de física, resolução de problemas e
-            pensamento crítico. O jogo incentiva os jogadores a pensar em como
-            os objetos interagem com o ambiente e como eles podem ser usados
-            para solucionar problemas, os jogadores precisam avaliar diferentes
-            soluções para cada desafio e escolher a que funciona melhor.
-          </p>
-        </div>
-        <button class="mudarConteudo" onclick="mudarConteudoanos10()">
-          Jogos >
-        </button>
       </div>
-      <div class="footer"></div>
     </div>
   </body>
 </html>

@@ -25,7 +25,7 @@ body {
 
 .timeline {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: 80px repeat(6, 1fr);
 }
 
 .timeline button {
@@ -48,6 +48,14 @@ body {
 
 .era-selecionada:hover {
   opacity: 1 !important;
+}
+
+button.home {
+  background-color: #243240;
+}
+
+button.home img {
+  height: 30px;
 }
 
 .anos70 {
@@ -92,7 +100,7 @@ body {
   font-size: 28px;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 900px) {
   .container {
     display: flex;
     flex-direction: column;
@@ -103,9 +111,9 @@ body {
   }
 }
 
-.mudarConteudo{
+.mudarConteudo {
   background: none;
-  border:none;
+  border: none;
   outline: none;
   color: #fff;
   font-family: inherit;
@@ -116,6 +124,6 @@ body {
   padding: 10px;
 }
 
-.mudarConteudo:hover{
+.mudarConteudo:hover {
   text-decoration: underline;
 }
